@@ -10,7 +10,6 @@ module.exports = {
   entry: {
     index: './src/index.js',
     accordion: './src/assets/js/accordion.js',
-    swiper: './src/assets/js/swiper.js',
     tab: './src/assets/js/tab.js',
     modal: './src/assets/js/modal.js',
     tooltip: './src/assets/js/tooltip.js',

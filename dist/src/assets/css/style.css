@@ -149,8 +149,7 @@ main {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위해 사용 */
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
   border: 0;
 }
 
@@ -535,8 +534,7 @@ fieldset legend {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위해 사용 */
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
   border: 0;
 }
 .form-checkbox-group .form-checkbox:checked ~ .form-checkbox-label::before {
@@ -597,8 +595,7 @@ fieldset legend {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위해 사용 */
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
   border: 0;
 }
 .form-radio-group .form-radio:checked ~ .form-radio-label::before {
