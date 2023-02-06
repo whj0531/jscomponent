@@ -35,6 +35,8 @@ npm run dev
 ```
 
 ## 5. 디렉토리 구조
+
+```
 - .vscode
   ├── dist                      # Bundled Files
   ├── node_modules              # Node Modules
@@ -79,3 +81,5 @@ npm run dev
   ├── README.md                 # README.md
   ├── webpack.config.js         # Webpack Config
   ...
+  
+```
