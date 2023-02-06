@@ -2,9 +2,9 @@
 @use './variables' as v;
 
 .toast {
-  opacity: 0;
+  // visibility: hidden;
   position: fixed;
-  bottom: 0;
+  bottom: -6rem;
   left: 50%;
   width: calc(100% - 4rem);
   padding: 2rem;
@@ -13,10 +13,9 @@
   box-sizing: border-box;
   @include m.font($color: v.$white, $font-size: 1.4rem);
   transform: translateX(-50%);
-  transition: all 0.3s ease;
+  transition: bottom 0.3s;
   &.is-show {
-    opacity: 1;
     bottom: 6rem;
-    transition: all 0.3s ease;
+    transition: bottom 0.3s;
   }
 }
