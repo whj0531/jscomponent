@@ -1,0 +1,68 @@
+@use './variables' as v;
+
+@mixin font($color: v.$black, $font-weight: v.$font-regular, $font-size: 1.6rem){
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}
+
+@mixin iconArrow($width: 0.6rem, $height: 0.6rem, $border-width: 1px, $color: v.$black, $rotate: bottom){
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border-bottom: $border-width solid $color;
+  border-right: $border-width solid $color;
+  @if $rotate == top {
+    transform: rotate(-135deg);
+  }@else if $rotate == right {
+    transform: rotate(-45deg);
+  }@else if $rotate == bottom {
+    transform: rotate(45deg);
+  }@else if $rotate == left {
+    transform: rotate(135deg);
+  }
+  @content;
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0); /* 구형 브라우저를 위해 사용 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  border: 0;
+}
+
+@mixin iconCheck($color: v.$black, $width: 1rem, $height: .5rem) {
+  width: $width;
+  height: $height;
+  border: 2px solid $color;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+  transform-origin: 25% 25%;
+}
+
+@mixin iconClose($size: 1.2, $color: v.$black, $bold: 0.15){
+  width: $size + rem;
+  height: $size + rem;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: auto;
+    left: ($size * 0.5 - ($bold * 0.5)) + rem;
+    width: $bold + rem;
+    height: $size + rem;
+    background-color: $color;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

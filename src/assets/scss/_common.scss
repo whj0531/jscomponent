@@ -1,0 +1,160 @@
+@use './mixin' as m;
+@use './variables' as v;
+
+//layout
+html,
+body {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 6rem;
+  background-color: v.$primary;
+  .title {
+    padding: 0 2rem;
+    @include m.font($font-size: 3rem, $color: $white);
+    a {
+      display: block;
+      color: v.$white;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    width: calc(100% - 6.8rem);
+    padding-right: 2rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+main {
+  display: block;
+}
+.page {
+  padding-bottom: 4rem;
+}
+.section {
+  padding: 0 2rem;
+  h2 {
+    @include m.font($font-size: 1.8rem);
+  }
+  h3 {
+    padding: 2rem 0 1rem;
+    @include m.font($font-size: 2rem);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0); /* 구형 브라우저를 위해 사용 */
+  clip-path: polygon(0 0, 0 0, 0 0); /* inset(50%) 와 동일한 표현 */
+  border: 0;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  &::after {
+    content: '';
+  }
+  &-close {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0.8rem;
+      width: 1.5px;
+      height: 23px;
+      background-color: $black;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  ~ .btn {
+    margin-left: 1rem;
+  }
+  > span {
+    pointer-events: none;
+  }
+  &-area {
+    display: flex;
+    width: 100%;
+    .btn {
+      width: 100%;
+      ~ .btn {
+        margin-left: 1rem;
+      }
+    }
+  }
+  &-nav {
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: rgba($white, 0.1);
+    border: 1px solid rgba($white, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem 0 rgba($white, 0.2);
+    box-sizing: border-box;
+    @include m.font($color: v.$white, $font-size: 1.6rem);
+    &.is-active {
+      border-color: rgba($white, 1);
+      border-width: 1.5px;
+    }
+  }
+  &-primary {
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: v.$primary;
+    border-radius: 1rem;
+    @include m.font($color: v.$white, $font-size: 1.4rem);
+  }
+  &-secondary {
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: v.$secondary;
+    border-radius: 1rem;
+    @include m.font($color: v.$black, $font-size: 1.4rem);
+  }
+}
+
+.item-flex {
+  display: flex;
+  height: calc(100vh - 6rem);
+}
+.display-flex {
+  display: flex;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}

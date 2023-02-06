@@ -1,0 +1,67 @@
+@use './mixin' as m;
+@use './variables' as v;
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 20rem;
+  height: 10rem;
+  background-color: v.$primary;
+  border-radius: 1rem;
+  text-align: left;
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    color: v.$white;
+    box-sizing: border-box;
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: -2rem;
+      left: 2rem;
+      border: 1rem solid transparent;
+      border-bottom-color: v.$primary;
+    }
+  }
+  &.is-show {
+    display: block;
+  }
+}
+.btn-tooltip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid v.$line;
+  border-radius: 50%;
+  @include m.font($font-size: 1.2rem);
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    @include m.font($color: v.$white, $font-size: 1.6rem);
+    .icon-close {
+      @include m.iconClose($color: v.$white);
+    }
+  }
+}

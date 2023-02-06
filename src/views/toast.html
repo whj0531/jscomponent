@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Toast</h3>
+      <button id="toastBtn01" type="button" class="btn btn-primary" data-toggle="toast01"><span>Open Toast</span></button>
+      <div id="toast01" class="toast" role="alert" aria-live="polite" aria-atomic="true" tabindex="0">
+        <p>Toast 내용</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

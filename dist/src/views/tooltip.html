@@ -1,0 +1,30 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip</title>
+<script defer src="../../src/assets/js/tooltip.js"></script><link href="../../src/assets/css/style.css" rel="stylesheet"></head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Tooltip</h3>
+      <div>텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트<button type="button" class="btn btn-tooltip" aria-describedby="tooltip01">?</button></div>
+      <div id="tooltip01" class="tooltip" role="tooltip" aria-hidden="true">
+        <div class="tooltip-content" tabindex="0">
+          <button type="button" class="btn btn-tooltip-close" aria-label="close"><span class="icon icon-close"></span></button>
+          <p>Tooltip Text...</p>
+        </div>
+      </div>
+      <br>
+      <div>텍스트<button type="button" class="btn btn-tooltip" aria-describedby="tooltip02">?</button></div>
+      <div id="tooltip02" class="tooltip" role="tooltip" aria-hidden="true">
+        <div class="tooltip-content" tabindex="0">
+          Tooltip Text...2
+        </div>
+      </div>
+    </section>
+    </main>
+</body>
+</html>

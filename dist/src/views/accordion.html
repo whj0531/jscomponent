@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+<script defer src="../../src/assets/js/accordion.js"></script><link href="../../src/assets/css/style.css" rel="stylesheet"></head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Accordion Default</h3>
+      <!-- Accordion -->
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <!-- is-active -->
+            <button id="accordion01" class="accordion-btn is-active" type="button" aria-expanded="true" aria-controls="panel01">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel01" class="accordion-body" role="region" aria-labelledby="accordion01">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <button id="accordion02" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel02">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel02" class="accordion-body" role="region" aria-labelledby="accordion02">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <button id="accordion03" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel03">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel03" class="accordion-body" role="region" aria-labelledby="accordion03">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Accordion -->
+    </section>
+    <section class="section">
+      <h3>Accordion Button Actions</h3>
+      <!-- Accordion Button Actions -->
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span class="accordion-title">제목</span>
+            <!-- is-active -->
+            <button id="accordion01-1" class="accordion-btn is-active" type="button" aria-expanded="true" aria-controls="panel01-1">
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel01-1" class="accordion-body" role="region" aria-labelledby="accordion01-1">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span class="accordion-title">제목</span>
+            <button id="accordion01-1" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel01-1">
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel02-1" class="accordion-body" role="region" aria-labelledby="accordion02-1">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span class="accordion-title">제목</span>
+            <button id="accordion01-1" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel01-1">
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel03-1" class="accordion-body" role="region" aria-labelledby="accordion03-1">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Accordion Button Actions -->
+    </section>
+    <section class="section">
+      <h3>Accordion OnlyOne</h3>
+      <!-- Accordion OnlyOne -->
+      <div class="accordion onlyone">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <!-- is-active -->
+            <button id="accordion01-2" class="accordion-btn is-active" type="button" aria-expanded="true" aria-controls="panel01-2">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel01-2" class="accordion-body" role="region" aria-labelledby="accordion01-2">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <button id="accordion02-2" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel02-2">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel02-2" class="accordion-body" role="region" aria-labelledby="accordion02-2">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <button id="accordion03-2" class="accordion-btn" type="button" aria-expanded="false" aria-controls="panel03-2">
+              <span class="accordion-title">제목</span>
+              <span class="icon icon-arrow"><span class="sr-only">닫힘</span></span>
+            </button>
+          </div>
+          <div id="panel03-2" class="accordion-body" role="region" aria-labelledby="accordion03-2">
+            <div class="accordion-content">
+              내용
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Accordion OnlyOne -->
+    </section>
+  </main>
+</body>
+</html>

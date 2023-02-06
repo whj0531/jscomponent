@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Modal</h3>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="modal01"><span>Modal Open!</span></button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="modal02"><span>Modal Open!</span></button>
+      <!-- Modal -->
+      <div id="modal01" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal01Title" aria-describedby="modal01Desc">
+        <div class="modal-dialog">
+          <div class="modal-content" tabindex="0">
+            <div class="modal-header">
+              <h4 id="modal01Title" class="modal-title">Modal title</h4>
+              <button type="button" class="btn btn-close">
+                <i class="icon icon-close" aria-label="팝업 닫기"></i>
+              </button>
+            </div>
+            <div id="modal01Desc" class="modal-body">
+              Woo-hoo, you're reading this text in a modal!
+            </div>
+            <div class="modal-footer">
+              <div class="btn-area">
+                <button type="button" class="btn btn-secondary" data-action="close">
+                  <span>Close</span>
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <span>Save changes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Modal -->
+      <!-- Modal -->
+      <div id="modal02" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal02Title" aria-describedby="modal02Desc">
+        <div class="modal-dialog">
+          <div class="modal-content" tabindex="0">
+            <div class="modal-header">
+              <h4 id="modal02Title" class="modal-title">Modal title2</h4>
+              <button type="button" class="btn btn-close">
+                <i class="icon icon-close" aria-label="팝업 닫기"></i>
+              </button>
+            </div>
+            <div id="modal02Desc" class="modal-body">
+              Woo-hoo, you're reading this text in a modal!2
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="modal03"><span>Modal Open!</span></button>
+            </div>
+            <div class="modal-footer">
+              <div class="btn-area">
+                <button type="button" class="btn btn-primary">
+                  <span>Save changes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Modal -->
+      <!-- Modal -->
+      <div id="modal03" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal03Title" aria-describedby="modal03Desc">
+        <div class="modal-dialog">
+          <div class="modal-content" tabindex="0">
+            <div class="modal-header">
+              <h4 id="modal03Title" class="modal-title">Modal title3</h4>
+              <button type="button" class="btn btn-close">
+                <i class="icon icon-close" aria-label="팝업 닫기"></i>
+              </button>
+            </div>
+            <div id="modal03Desc" class="modal-body">
+              Woo-hoo, you're reading this text in a modal!3
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="modal01"><span>Modal Open!</span></button>
+            </div>
+            <div class="modal-footer">
+              <div class="btn-area">
+                <button type="button" class="btn btn-primary" data-action="close">
+                  <span>Save changes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Modal -->
+    </section>
+  </main>
+</body>
+</html>

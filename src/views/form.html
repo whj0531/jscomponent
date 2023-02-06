@@ -1,0 +1,98 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Checkbox</h3>
+      <form>
+        <fieldset name="checkboxAll">
+          <legend class="sr-only">Checkbox All</legend>
+          <div class="form-checkbox-group">
+            <input id="chexkboxAll" class="form-checkbox" type="checkbox" name="checkGroupAll" value="all">
+            <label for="chexkboxAll" class="form-checkbox-label">전체체크</label>
+          </div>
+          <div class="form-checkbox-group">
+            <input id="chexkbox01" class="form-checkbox" type="checkbox" name="checkGroup" value="1" checked>
+            <label for="chexkbox01" class="form-checkbox-label">checkbox01</label>
+          </div>
+          <div class="form-checkbox-group">
+            <input id="chexkbox02" class="form-checkbox" type="checkbox" name="checkGroup" value="2">
+            <label for="chexkbox02" class="form-checkbox-label">checkbox02</label>
+          </div>
+          <div class="form-checkbox-group">
+            <input id="chexkbox03" class="form-checkbox" type="checkbox" name="checkGroup" value="3">
+            <label for="chexkbox03" class="form-checkbox-label">checkbox03</label>
+          </div>
+        </fieldset>
+      </form>
+      <!-- result -->
+      <br>
+      <div>전체체크 여부: <span id="checkboxAllValue"></span></div>
+      <div>체크 값: <span id="checkboxValue"></span></div>
+      <!-- // result -->
+    </section>
+    <section class="section">
+      <h3>Radio</h3>
+      <div>
+        <form>
+          <fieldset name="radioGroup">
+            <legend class="sr-only">Radio</legend>
+            <div class="form-radio-group">
+              <input id="radio01" class="form-radio" type="radio" name="radioGroup01" value="1" checked>
+              <label for="radio01" class="form-radio-label">radio01</label>
+            </div>
+            <div class="form-radio-group">
+              <input id="radio02" class="form-radio" type="radio" name="radioGroup01" value="2">
+              <label for="radio02" class="form-radio-label">radio02</label>
+            </div>
+            <div class="form-radio-group">
+              <input id="radio03" class="form-radio" type="radio" name="radioGroup01" value="3">
+              <label for="radio03" class="form-radio-label">radio03</label>
+            </div>
+          </fieldset>
+        </form>
+        <!-- result -->
+        <br>
+        <div>체크 값: <span id="radioValue"></span></div>
+        <!-- // result -->
+      </div>
+    </section>
+    <section class="section">
+      <h3>Input</h3>
+      <div>
+        <form>
+          <fieldset>
+            <legend class="sr-only">Input</legend>
+            <!-- form-group -->
+            <div class="form-input-group">
+              <label for="input01" class="form-input-label">이름</label>
+              <div class="form-inner-group">
+                <input type="text" id="input01" class="form-input" placeholder="이름을 입력해주세요.">
+                <button type="button" class="btn btn-close" aria-label="지우기"><span class="icon icon-close"></span></button>
+              </div>
+              <div class="form-input-valid is-show">이름을 입력해주세요.</div>
+            </div>
+            <!-- // form-group -->
+            <!-- form-group -->
+            <div class="form-input-group">
+              <label for="input02" class="form-input-label">나이</label>
+              <div class="form-inner-group">
+                <input type="text" id="input02" class="form-input" placeholder="나이를 입력해주세요.">
+                <button type="button" class="btn btn-close" aria-label="지우기"><span class="icon icon-close"></span></button>
+              </div>
+              <div class="form-input-valid">나이를 입력해주세요.</div>
+            </div>
+            <!-- // form-group -->
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

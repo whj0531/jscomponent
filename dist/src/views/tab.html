@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab</title>
+<script defer src="../../src/assets/js/tab.js"></script><link href="../../src/assets/css/style.css" rel="stylesheet"></head>
+<body>
+  <header class="header" include-html="./header.html"></header>
+  <main class="page">
+    <section class="section">
+      <h3>Tab</h3>
+      <!-- Tab -->
+      <div class="tab">
+        <!-- Tab links -->
+        <div class="tab-link" role="tablist">
+          <button type="button" id="tabBtn01" class="tab-link-btn" role="tab" aria-controls="tab01" aria-selected="false" tabindex="-1">
+            Tab1
+          </button>
+          <button type="button" id="tabBtn02" class="tab-link-btn is-active" role="tab" aria-controls="tab02" aria-selected="true" tabindex="0">
+            Tab2
+          </button>
+          <button type="button" id="tabBtn03" class="tab-link-btn" role="tab" aria-controls="tab03" aria-selected="false" tabindex="-1">
+            Tab3
+          </button>
+        </div>
+        <!-- Tab content -->
+        <div class="tab-content">
+          <div id="tab01" class="tab-content-panel" role="tabpanel" aria-labelledby="tabBtn01" tabindex="0">
+            <div class="tab-panel-inner">탭내용1</div>
+          </div>
+          <div id="tab02" class="tab-content-panel" role="tabpanel" aria-labelledby="tabBtn02" tabindex="0">
+            <div class="tab-panel-inner">탭내용2</div>
+          </div>
+          <div id="tab03" class="tab-content-panel" role="tabpanel" aria-labelledby="tabBtn03" tabindex="0">
+            <div class="tab-panel-inner">탭내용3</div>
+          </div>
+        </div>
+      </div>
+      <!-- // Tab -->
+    </section>
+  </main>
+</body>
+</html>
