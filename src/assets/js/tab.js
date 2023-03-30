@@ -2,41 +2,40 @@ import "../scss/style.scss";
 import includeHTML from "../js/common";
 
 function tab(){
-  const tabEl = document.getElementsByClassName('tab');
-  for(let i = 0; i < tabEl.length; i++){
-    const tab = tabEl[i];
+  const tabEl = document.querySelectorAll('.tab');
+
+  tabEl.forEach(tab => {
     const tabBtns = tab.querySelectorAll('.tab-link-btn');
     const tabPanels = tab.querySelectorAll('.tab-content-panel');
-    for(let j = 0; j < tabBtns.length; j++){
-      const tabBtn = tabBtns[j];
-      const tabPanel = tabPanels[j];
+    tabBtns.forEach((btn, i) => {
+      const tabPanel = tabPanels[i]
       // 초기 active
-      if (tabBtn.classList.contains('is-active')){
-        tabBtn.ariaSelected = 'true'
-        tabBtn.setAttribute('tabindex', 0);
+      if (btn.classList.contains('is-active')){
+        btn.ariaSelected = 'true'
+        btn.setAttribute('tabindex', 0);
         if (!tabPanel.classList.contains('is-active')){
           tabPanel.classList.add('is-active');
         }
       }
       // tab event
-      tabBtn.addEventListener('click', function(){
-        if (!tabBtn.classList.contains('is-active')){
-          for(let l = 0; l < tabBtns.length; l++){
-            tabBtns[l].ariaSelected = 'false'
-            tabBtns[l].setAttribute('tabindex', -1);
-            tabBtns[l].classList.remove('is-active');
-            tabPanels[l].classList.remove('is-active');
+      btn.addEventListener('click', function(){
+        if (!this.classList.contains('is-active')){
+          for(let j = 0; j < tabBtns.length; j++){
+            tabBtns[j].ariaSelected = 'false'
+            tabBtns[j].setAttribute('tabindex', -1);
+            tabBtns[j].classList.remove('is-active');
+            tabPanels[j].classList.remove('is-active');
           }
         }
-        tabBtn.classList.add('is-active');
-        tabBtn.ariaSelected = 'true'
-        tabBtn.setAttribute('tabindex', 0);
+        this.classList.add('is-active');
+        this.ariaSelected = 'true'
+        this.setAttribute('tabindex', 0);
         tabPanel.classList.add('is-active');
       })
-    }
+    })
     // 접근성 실행
     tabA11y(tabBtns);
-  }
+  })
 }
 // 접근성
 function tabA11y(tabBtns){

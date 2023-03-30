@@ -3,21 +3,21 @@ import includeHTML from "../js/common";
 
 function tooltip(){
   const tooltip = document.querySelectorAll('[role="tooltip"]');
-  for(let i = 0; i < tooltip.length; i++){
-    const tooltipBtn = document.querySelector(`[aria-describedby="${tooltip[i].id}"]`);
+  tooltip.forEach((item) => {
+    const tooltipBtn = document.querySelector(`[aria-describedby="${item.id}"]`);
     const tooltipBtnLeft = tooltipBtn.getBoundingClientRect().left;
     const tooltipBtnTop = tooltipBtn.getBoundingClientRect().top;
-    const tooltipContent = tooltip[i].querySelector('.tooltip-content');
-    const tooltipBtnClose = tooltip[i].querySelector('.btn-tooltip-close');
+    const tooltipContent = item.querySelector('.tooltip-content');
+    const tooltipBtnClose = item.querySelector('.btn-tooltip-close');
 
     tooltipBtn.addEventListener('click', function(){
-      if (!tooltip[i].classList.contains('is-show')){
+      if (!item.classList.contains('is-show')){
         tooltipShow();
       }else {
         tooltipHide();
       }
     })
-    tooltip[i].addEventListener('click', function(e){
+    item.addEventListener('click', function(e){
       e.stopPropagation();
       if (this.classList.contains('is-show')){
         tooltipHide();
@@ -33,17 +33,17 @@ function tooltip(){
     }
     
     function tooltipShow() {
-      tooltip[i].classList.add('is-show');
-      tooltip[i].setAttribute('aria-hidden', 'false');
-      tooltip[i].style = `left: ${tooltipBtnLeft - 20}px; top: ${tooltipBtnTop + 34}px`;
+      item.classList.add('is-show');
+      item.setAttribute('aria-hidden', 'false');
+      item.style = `left: ${tooltipBtnLeft - 20}px; top: ${tooltipBtnTop + 34}px`;
     }
     function tooltipHide() {
-      tooltip[i].classList.remove('is-show');
-      tooltip[i].setAttribute('aria-hidden', 'true');
-      tooltip[i].style = '';
+      item.classList.remove('is-show');
+      item.setAttribute('aria-hidden', 'true');
+      item.style = '';
       tooltipBtn.focus();
     }
-  }
+  })
 }
 
 
